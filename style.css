@@ -60,3 +60,28 @@ main .simulation-section .simulation {
     border: 2px solid #000;
     border-radius: 15px;
 }
+
+main .simulation-section .simulation div {
+    display: flex;
+    align-items: center;
+}
+
+main .simulation-section .simulation div p {
+    width: 60%;
+    margin: 20px;
+}
+
+main .simulation-section .simulation div input{
+    width: 30%;
+    height: 30px;
+    box-shadow: 2px 2px 0 0 #31c572;
+    border: 1px solid #000;
+}
+
+main .simulation-section .simulation div select,
+main .simulation-section .simulation div option {
+    width: 31%;
+    height: 30px;
+    box-shadow: 2px 2px 0 0 #31c572;
+    border: 1px solid #000;
+}

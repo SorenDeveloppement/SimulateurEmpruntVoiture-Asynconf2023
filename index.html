@@ -11,7 +11,7 @@
         <a href="#" class="header-text">GREEN BANK</a>
         <div class="header-div">
             <a href="#previous">Mes simulations</a>
-            <a href="#simulation">Simulation</a>
+            <a href="#simulation-section">Simulation</a>
             <a href="#">Infos</a>
         </div>
     </header>
@@ -24,15 +24,53 @@
             </div>
         </section>
 
-        <section id="simulation" class="simulation-section">
+        <section id="simulation-section" class="simulation-section">
             <h2>Simulation :</h2>
             <div class="simulation">
                 <div class="car-type">
+                    <p>Quel est votre type de voiture :</p>
                     <select name="car-type" id="car-type">
-                        <option value="Citatine">Citatine</option>
+                        <option value="Citadine">Citatdne</option>
+                        <option value="Cabriolet">Cabriolet</option>
+                        <option value="Berline">Berline</option>
+                        <option value="SUV / 4x4">SUV / 4x4</option>
                     </select>
                 </div>
+                <div class="car-energy">
+                    <p>Quel est l'énergie utilisée par votre voiture :</p>
+                    <select name="car-energy" id="car-energy">
+                        <option value="essence">Essence</option>
+                        <option value="electrique">Électrique</option>
+                        <option value="gaz">Gaz</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="hybride">Hybride</option>
+                    </select>
+                </div>
+                <div class="car-weight">
+                    <p>Quel est le poid du véhicule :</p>
+                    <input class="text-input" id="car-weight" type="text">
+                </div>
+                <div class="car-travel">
+                    <p>Quel sera son kilométrage par an en millier :</p>
+                    <select name="car-travel" id="car-travel">
+                        <option value="5-10">5-10</option>
+                        <option value="10-15">10-15</option>
+                        <option value="15-20">15-20</option>
+                        <option value="20-25">20-25</option>
+                        <option value="25-30">25-30</option>
+                    </select>
+                </div>
+                <div class="car-creation">
+                    <p>Quelle est l'année de construction de la voiture :</p>
+                    <input type="number" id="car-creation" name="car-creation" min="1960">
+                </div>
+                <div class="car-passengers">
+                    <p>Combien y aura-t-il de passagers :</p>
+                    <input type="number" id="car-passengers" name="car-passengers" min="1" max="4">
+                </div>
             </div>
+
+            <a class="simulation-button" href="#">Effectuer la simulation</a>
         </section>
     </main>
 
