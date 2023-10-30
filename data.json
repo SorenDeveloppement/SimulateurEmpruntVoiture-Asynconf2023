@@ -6,15 +6,15 @@
         },
         "Cabriolet": {
             "poid_moyen": "1300-2000",
-            "note": 8
+            "note": 6
         },
         "Berline": {
             "poid_moyen": "1300-1800",
-            "note": 8
+            "note": 6.5
         },
         "SUV / 4x4": {
             "poid_moyen": "1500-2500",
-            "note": 8
+            "note": 4
         }
     },
     "energie": {
