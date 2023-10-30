@@ -43,7 +43,7 @@ async function createNewSimulation(note, taux, creation) {
 		`<div class="previous_result"><p>Note : <span class="green">${note}/40</span></p><p>Taux d\emprunt : <span class="green">${taux}%</span></p></div>` +
 		"</article>";
 
-	if (previousText.innerText == "Vois n'avez aucune simulations !") {
+	if (previousText.innerText == "Vous n'avez aucune simulations !") {
 		previousText.innerText = ""
 		previousDiv.innerHTML += newContent;
 	} else {
@@ -114,7 +114,7 @@ async function result() {
 				note <= parseInt(notes_btw[1])
 			) {
 				console.log(true)
-				taux += parseFloat(
+				taux += parseFloat(Number(
 					await data.then((response) => {
 						return (
 							parseFloat(response.taux[elem]) +
@@ -123,7 +123,7 @@ async function result() {
 							)
 						);
 					})
-				);
+				).toFixed(2));
 			}
 		}
 
