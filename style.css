@@ -71,10 +71,15 @@ main .previous-simulations-section .previous-simulations article div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 10px;
 }
 
 main .previous-simulations-section .previous-simulations article div img {
     height: 50px;
+}
+
+main .previous-simulations-section .previous-simulations article div p {
+    font-size: 15px;
 }
 
 main .simulation-section .simulation {
@@ -140,4 +145,12 @@ main .result-section .result p {
 .error {
     color: red;
     margin: 10px;
+}
+
+/* Style of the footer */
+
+footer {
+    margin: 0;
+    background: #1e1e1e;
+    color: #fff;
 }
