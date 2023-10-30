@@ -38,6 +38,8 @@ main {
 }
 
 main section {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 100px;
 }
 
@@ -84,4 +86,18 @@ main .simulation-section .simulation div option {
     height: 30px;
     box-shadow: 2px 2px 0 0 #31c572;
     border: 1px solid #000;
+}
+
+.simulation-button {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    background: #31c572;
+    width: 30%;
+    height: 60px;
+    margin: 50px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
 }
