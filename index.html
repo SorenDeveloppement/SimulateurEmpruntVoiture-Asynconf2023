@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulateur d'emprunt</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Green Bank</title>
+  </head>
+  <body>
+    <header>
+        <a href="#" class="header-text">GREEN BANK</a>
+        <div class="header-div">
+            <a href="#previous">Mes simulations</a>
+            <a href="#simulation">Simulation</a>
+            <a href="#">Infos</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="previous" class="previous-simulations-section">
+            <h2>Mes simulations :</h2>
+            <div class="previous-simulations">
+                <p>Vois n'avez aucune simulations !</p>
+            </div>
+        </section>
+
+        <section id="simulation" class="simulation-section">
+            <h2>Simulation :</h2>
+            <div class="simulation">
+                <div class="car-type">
+                    <select name="car-type" id="car-type">
+                        <option value="Citatine">Citatine</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="./index.js"></script>
+  </body>
 </html>
