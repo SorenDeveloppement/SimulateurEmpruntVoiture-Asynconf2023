@@ -9,19 +9,6 @@ function getVehicleEnergy() {
 	return document.getElementById("car-energy").value;
 }
 
-async function getVehicleWeight() {
-	const input = parseInt(document.getElementById("car-weight").value);
-	const carData = await data.then((response) => {
-		return response.type_vehicule[getVehicleType()].poid_moyen.split("-");
-	});
-
-	if (carData[0] < input && input < carData[1]) {
-		return input;
-	} else {
-		return Promise.resolve();
-	}
-}
-
 function getVehicleTravel() {
 	return document.getElementById("car-travel").value;
 }
@@ -34,14 +21,36 @@ function getVehiclePassengers() {
 	return document.getElementById("car-passengers").value;
 }
 
-function createNewSimulation() {}
+function adjustNote(note) {
+	if (note - parseInt(note) < 0.51) {
+		return Math.floor(note);
+	} else {
+		return Math.ceil(note);
+	}
+}
+
+function createNewSimulation(note, taux) {
+	const previousDiv = document.getElementById("previous");
+	const previousText = document.getElementById("previous-text");
+	
+	if (previousText.innerText == "Vois n'avez aucune simulations !") {
+		previousText.innerText = ""
+	} else {
+		
+	}
+}
+
+function createResult(note, taux) {
+	const resultSection = document.getElementById("result-section");
+	resultSection.innerHTML = `<h2>Résultat :</h2><div id=\"result\" class=\"result\"><p>Note : <span class=\"green\">${note}/40</span></p><p>Taux d'emprunt : <span class=\"green\">${taux}%</span></p></div>`;
+}
 
 async function result() {
 	const error = document.getElementById("error");
 	let note = 0;
+	let taux = 0;
 
 	if (
-		(await getVehicleWeight()) == null ||
 		getVehicleCreation() == "" ||
 		getVehicleCreation() < 1960 ||
 		getVehiclePassengers() == "" ||
@@ -66,17 +75,45 @@ async function result() {
 
 		for (elem in dates) {
 			const dates_btw = elem.split("-");
-            console.log(dates_btw)
 			const date = parseInt(getVehicleCreation());
-			if (parseInt(dates_btw[0]) < date && date < parseInt(dates_btw[1])) {
-                console.log(true)
-				note += parseInt(await data.then((response) => {
-					return parseInt(response.annee[elem]);
-				}));
-                console.log(true)
+			if (
+				parseInt(dates_btw[0]) <= date &&
+				date < parseInt(dates_btw[1])
+			) {
+				note += parseInt(
+					await data.then((response) => {
+						return parseInt(response.annee[elem]);
+					})
+				);
 			}
 		}
 
-		console.log(note);
+		note = adjustNote(note);
+
+		const notes = await data.then((response) => {
+			return response.taux;
+		});
+		console.log(notes);
+		for (elem in notes) {
+			const notes_btw = elem.split("-");
+			console.log(notes_btw);
+			if (
+				parseInt(notes_btw[0]) <= note &&
+				note < parseInt(notes_btw[1])
+			) {
+				taux += parseFloat(
+					await data.then((response) => {
+						return (
+							parseFloat(response.taux[elem]) +
+							parseFloat(
+								response.passagers[getVehiclePassengers()]
+							)
+						);
+					})
+				);
+			}
+		}
+
+		createResult(note, taux);
 	}
 }

@@ -99,6 +99,24 @@ main .simulation-section .simulation div option {
     align-self: center;
 }
 
+main .result-section .result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    
+}
+
+main .result-section .result p {
+    font-size: 25px;
+}
+
+.green {
+    color: #31c572;
+    font-weight: bold;
+}
+
 /* Error style */
 .error {
     color: red;

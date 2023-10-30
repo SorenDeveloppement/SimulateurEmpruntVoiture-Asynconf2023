@@ -10,17 +10,17 @@
 		<header>
 			<a href="#" class="header-text">GREEN BANK</a>
 			<div class="header-div">
-				<a href="#previous">Mes simulations</a>
+				<a href="#previous-section">Mes simulations</a>
 				<a href="#simulation-section">Simulation</a>
 				<a href="#">Infos</a>
 			</div>
 		</header>
 
 		<main>
-			<section id="previous" class="previous-simulations-section">
+			<section id="previous-section" class="previous-simulations-section">
 				<h2>Mes simulations :</h2>
-				<div class="previous-simulations">
-					<p>Vois n'avez aucune simulations !</p>
+				<div id="previous" class="previous-simulations">
+					<p id="previous-text">Vois n'avez aucune simulations !</p>
 				</div>
 			</section>
 
@@ -45,10 +45,6 @@
 							<option value="diesel">Diesel</option>
 							<option value="hybride">Hybride</option>
 						</select>
-					</div>
-					<div class="car-weight">
-						<p>Quel est le poid du véhicule :</p>
-						<input class="text-input" id="car-weight" type="text" />
 					</div>
 					<div class="car-travel">
 						<p>Quel sera son kilométrage par an en millier :</p>
@@ -91,7 +87,9 @@
 				<a class="simulation-button" href="#simulation" onclick="result()">Effectuer la simulation</a>
 			</section>
 
-			<section class="result" id="result"></section>
+			<section class="result-section" id="result-section">
+                
+            </section>
 		</main>
 
 		<footer></footer>
