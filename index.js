@@ -1,6 +1,7 @@
 // Import data from the data.json file
 const data = fetch("./data.json").then((response) => response.json());
 
+// Getters of values
 function getVehicleType() {
 	return document.getElementById("car-type").value;
 }
@@ -21,6 +22,7 @@ function getVehiclePassengers() {
 	return document.getElementById("car-passengers").value;
 }
 
+// Round the note
 function adjustNote(note) {
 	if (note - parseInt(note) < 0.51) {
 		return Math.floor(note);
@@ -29,6 +31,7 @@ function adjustNote(note) {
 	}
 }
 
+// Append the section Mes simulation with the new simulation created
 async function createNewSimulation(note, taux, creation) {
 	const previousDiv = document.getElementById("previous");
 	const previousText = document.getElementById("previous-text");
@@ -43,7 +46,7 @@ async function createNewSimulation(note, taux, creation) {
 		`<div class="previous_result"><p>Note : <span class="green">${note}/40</span></p><p>Taux d\emprunt : <span class="green">${taux}%</span></p></div>` +
 		"</article>";
 
-	if (previousText.innerText == "Vous n'avez aucune simulations !") {
+	if (previousText.innerText == "Vous n'avez aucune simulation !") {
 		previousText.innerText = ""
 		previousDiv.innerHTML += newContent;
 	} else {
@@ -51,17 +54,20 @@ async function createNewSimulation(note, taux, creation) {
 	}
 }
 
+// Create the content of the result section
 function createResult(note, taux) {
 	const resultSection = document.getElementById("result-section");
 	resultSection.innerHTML = `<h2>Résultat :</h2><div id=\"result\" class=\"result\"><p>Note : <span class=\"green\">${note}/40</span></p><p>Taux d'emprunt : <span class=\"green\">${taux}%</span></p></div>`;
 }
 
+// Calculation of the rating and the rate of the vehicle
 async function result() {
 	const error = document.getElementById("error");
 	let note = 0;
 	let taux = 0;
 	let creation = null
 
+	// Check if an input is empty
 	if (
 		getVehicleCreation() == "" ||
 		getVehicleCreation() < 1960 ||
@@ -72,6 +78,7 @@ async function result() {
 		error.style.display = "block";
 		return;
 	} else {
+		// Calculations
 		error.style.display = "none";
 		note += await data.then((response) => {
 			return (
@@ -127,6 +134,7 @@ async function result() {
 			}
 		}
 
+		// Modifying the html content
 		createResult(note, taux);
 		createNewSimulation(note, taux, creation);
 	}
