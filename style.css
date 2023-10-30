@@ -51,11 +51,30 @@ main .previous-simulations {
     border: 2px dashed #000;
     border-radius: 15px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 main .previous-simulations p {
     padding: 10px;
+}
+
+main .previous-simulations-section .previous-simulations article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .previous-simulations-section .previous-simulations article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .previous-simulations-section .previous-simulations article div img {
+    height: 50px;
 }
 
 main .simulation-section .simulation {
