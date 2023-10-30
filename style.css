@@ -18,6 +18,7 @@ header a {
     text-decoration: none;
     color: #000;
     padding: 15px;
+    transition: 0.25s ease-in-out;
 }
 
 header .header-text {
@@ -25,12 +26,21 @@ header .header-text {
     font-size: 30px;
     color: #31c572;
     font-weight: bold;
+    transition: 0.25s ease-in-out;
+}
+
+header .header-text:hover {
+    transform: skewX(-10deg);
 }
 
 header .header-div {
     padding: 20px;
 }
 
+header .header-div a:hover {
+    background: #31c572;
+    border-radius: 2px;
+}
 
 /* Style of the main content */
 main {
