@@ -150,7 +150,16 @@ main .result-section .result p {
 /* Style of the footer */
 
 footer {
-    margin: 0;
+    padding: 20px;
     background: #1e1e1e;
     color: #fff;
+}
+
+footer p.question {
+    margin: 0;
+    font-size: 25px;
+}
+
+footer p.copy {
+    font-size: 10px;
 }

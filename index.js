@@ -111,8 +111,9 @@ async function result() {
 			const notes_btw = elem.split("-");
 			if (
 				parseInt(notes_btw[0]) <= note &&
-				note < parseInt(notes_btw[1])
+				note <= parseInt(notes_btw[1])
 			) {
+				console.log(true)
 				taux += parseFloat(
 					await data.then((response) => {
 						return (
