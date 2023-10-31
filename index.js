@@ -165,19 +165,18 @@ async function loadSelectorValues(id, json) {
 	const travelValues = await data.then((response) => {
 		return response[json];
 	});
-	let content = ""
+	let content = "";
 
 	for (elem in travelValues) {
-		content += `<option value="${elem}">${elem}</option>`
+		content += `<option value="${elem}">${elem}</option>`;
 	}
 
-	travelSelector.innerHTML = content
+	travelSelector.innerHTML = content;
 }
-
 
 /* Call the loadSelectorsValues when window is loaded */
 window.onload = () => {
 	loadSelectorValues("car-type", "type_vehicule");
 	loadSelectorValues("car-energy", "energie");
 	loadSelectorValues("car-travel", "kilometrage");
-}
+};

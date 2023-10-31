@@ -1,224 +1,222 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
 
 body {
-    font-family: 'Poppins';
-    margin: 0;
+	font-family: "Poppins";
+	margin: 0;
 }
 
 /* Style of the header */
 header {
-    display: flex;
-    height: 100px;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #000 ;
+	display: flex;
+	height: 100px;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid #000;
 }
 
 header a {
-    text-decoration: none;
-    color: #000;
-    padding: 15px;
-    transition: 0.25s ease-in-out;
+	text-decoration: none;
+	color: #000;
+	padding: 15px;
+	transition: 0.25s ease-in-out;
 }
 
 header .header-text {
-    padding: 20px;
-    font-size: 30px;
-    color: #31c572;
-    font-weight: bold;
-    transition: 0.25s ease-in-out;
+	padding: 20px;
+	font-size: 30px;
+	color: #31c572;
+	font-weight: bold;
+	transition: 0.25s ease-in-out;
 }
 
 header .header-text:hover {
-    transform: skewX(-10deg);
+	transform: skewX(-10deg);
 }
 
 header .header-div {
-    padding: 20px;
+	padding: 20px;
 }
 
 header .header-div a:hover {
-    background: #31c572;
-    border-radius: 2px;
+	background: #31c572;
+	border-radius: 2px;
 }
 
 /* Style of the main content */
 main {
-    margin: 10%;
+	margin: 10%;
 }
 
 main section {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 100px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 100px;
 }
 
 main h2 {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 main .previous-simulations {
-    border: 2px dashed #000;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	border: 2px dashed #000;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 main .previous-simulations p {
-    padding: 10px;
+	padding: 10px;
 }
 
 main .previous-simulations-section .previous-simulations article {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
 }
 
 main .previous-simulations-section .previous-simulations article div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
 }
 
 main .previous-simulations-section .previous-simulations article div img {
-    height: 50px;
+	height: 50px;
 }
 
 main .previous-simulations-section .previous-simulations article div p {
-    font-size: 15px;
+	font-size: 15px;
 }
 
 main .simulation-section .simulation {
-    border: 2px solid #000;
-    border-radius: 15px;
+	border: 2px solid #000;
+	border-radius: 15px;
 }
 
 main .simulation-section .simulation div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 main .simulation-section .simulation div p {
-    width: 60%;
-    font-size: 150%;
-    margin: 20px;
+	width: 60%;
+	font-size: 150%;
+	margin: 20px;
 }
 
 main .simulation-section .simulation div input,
 main .simulation-section .simulation div select,
 main .simulation-section .simulation div option {
-    width: 30%;
-    height: 30px;
-    margin: 20px;
-    box-shadow: 2px 2px 0 0 #31c572;
-    border: 1px solid #000;
+	width: 30%;
+	height: 30px;
+	margin: 20px;
+	box-shadow: 2px 2px 0 0 #31c572;
+	border: 1px solid #000;
 }
 
 .simulation-button {
-    display: flex;
-    text-decoration: none;
-    color: #31c572;
-    border: 3.5px solid #31c572;
-    width: 30%;
-    height: 60px;
-    margin: 50px;
-    border-radius: 15px;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    transition: 0.25s ease-in-out;
+	display: flex;
+	text-decoration: none;
+	color: #31c572;
+	border: 3.5px solid #31c572;
+	width: 30%;
+	height: 60px;
+	margin: 50px;
+	border-radius: 15px;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	transition: 0.25s ease-in-out;
 }
 
 .simulation-button:hover {
-    color: #000;
-    background: #31c572;
+	color: #000;
+	background: #31c572;
 }
 
 main .result-section .result {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
 }
 
 main .result-section .result p {
-    font-size: 25px;
+	font-size: 25px;
 }
 
 .green {
-    color: #31c572;
-    font-weight: bold;
+	color: #31c572;
+	font-weight: bold;
 }
 
 /* Error style */
 .error {
-    color: red;
-    margin: 10px;
+	color: red;
+	margin: 10px;
 }
 
 /* Style of the footer */
-
 footer {
-    padding: 20px;
-    background: #1e1e1e;
-    color: #fff;
+	padding: 20px;
+	background: #1e1e1e;
+	color: #fff;
 }
 
 footer p.question {
-    margin: 0;
-    font-size: 25px;
+	margin: 0;
+	font-size: 25px;
 }
 
 footer p.copy {
-    font-size: 10px;
+	font-size: 10px;
 }
 
 /* Making the site available for phones */
 
 @media only screen and (max-width: 680px) {
-    /* Header */
-    header .header-text {
-        font-size: 20px;
-    }
+	/* Header */
+	header .header-text {
+		font-size: 20px;
+	}
 
-    header .header-div a {
-        font-size: 10px;
-        padding: 10px;
-    }
+	header .header-div a {
+		font-size: 10px;
+		padding: 10px;
+	}
 
-    /* Main content */
-    main .previous-simulations-section .previous-simulations article div img {
-        height: 15px;
-    }
+	/* Main content */
+	main .previous-simulations-section .previous-simulations article div img {
+		height: 15px;
+	}
 
-    main .previous-simulations-section .previous-simulations article div p {
-        font-size: 9px;
-    }
+	main .previous-simulations-section .previous-simulations article div p {
+		font-size: 9px;
+	}
 
-    main .previous-simulations-section .previous-simulations article div h3 {
-        font-size: 13px;
-    }
+	main .previous-simulations-section .previous-simulations article div h3 {
+		font-size: 13px;
+	}
 
-    main .simulation-section .simulation div p {
-        font-size: 100%;
-    }
+	main .simulation-section .simulation div p {
+		font-size: 100%;
+	}
 
-    main .simulation-section .simulation-button {
-        font-size: 10px;
-    }
+	main .simulation-section .simulation-button {
+		font-size: 10px;
+	}
 }
 
 /* Button size */
 @media only screen and (max-width: 780px) {
-    main .simulation-section .simulation-button {
-        font-size: 10px;
-    }
+	main .simulation-section .simulation-button {
+		font-size: 10px;
+	}
 }
