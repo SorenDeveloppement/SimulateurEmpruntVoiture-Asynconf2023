@@ -93,6 +93,10 @@ main .previous-simulations-section .previous-simulations article div p {
 	font-size: 15px;
 }
 
+main .previous-simulations-section .previous-simulations article div.travel p {
+	font-size: 10px;
+}
+
 main .simulation-section .simulation {
 	border: 2px solid #000;
 	border-radius: 15px;
