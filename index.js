@@ -158,3 +158,26 @@ async function result() {
 		createNewSimulation(note, taux, creation);
 	}
 }
+
+/* Load Selector Values */
+async function loadSelectorValues(id, json) {
+	const travelSelector = document.getElementById(id);
+	const travelValues = await data.then((response) => {
+		return response[json];
+	});
+	let content = ""
+
+	for (elem in travelValues) {
+		content += `<option value="${elem}">${elem}</option>`
+	}
+
+	travelSelector.innerHTML = content
+}
+
+
+/* Call the loadSelectorsValues when window is loaded */
+window.onload = () => {
+	loadSelectorValues("car-type", "type_vehicule");
+	loadSelectorValues("car-energy", "energie");
+	loadSelectorValues("car-travel", "kilometrage");
+}

@@ -72,7 +72,8 @@ main .previous-simulations p {
 
 main .previous-simulations-section .previous-simulations article {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -99,7 +100,7 @@ main .simulation-section .simulation {
 
 main .simulation-section .simulation div {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -178,4 +179,46 @@ footer p.question {
 
 footer p.copy {
     font-size: 10px;
+}
+
+/* Making the site available for phones */
+
+@media only screen and (max-width: 680px) {
+    /* Header */
+    header .header-text {
+        font-size: 20px;
+    }
+
+    header .header-div a {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    /* Main content */
+    main .previous-simulations-section .previous-simulations article div img {
+        height: 15px;
+    }
+
+    main .previous-simulations-section .previous-simulations article div p {
+        font-size: 9px;
+    }
+
+    main .previous-simulations-section .previous-simulations article div h3 {
+        font-size: 13px;
+    }
+
+    main .simulation-section .simulation div p {
+        font-size: 100%;
+    }
+
+    main .simulation-section .simulation-button {
+        font-size: 10px;
+    }
+}
+
+/* Button size */
+@media only screen and (max-width: 780px) {
+    main .simulation-section .simulation-button {
+        font-size: 10px;
+    }
 }
